@@ -2,6 +2,12 @@
 	"name": "isabry/admin-laravel",
 	"description": "The admin integration for Laravel.",
 	"keywords": ["framework", "laravel"],
+	"authors": [
+		{
+			"name": "ISY",
+			"email": "isabry@gmail.com"
+		}
+	],
 	"require": {
 		"laravel/framework": "4.2.*",
 		"barryvdh/laravel-debugbar": "~1.8",
