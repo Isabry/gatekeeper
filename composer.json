@@ -14,13 +14,14 @@
 		"cartalyst/sentry": "2.1.*"
 	},
 	"autoload": {
-		"classmap": [
-			"app/commands",
-			"app/controllers",
-			"app/models",
-			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
+        "psr-4": {
+            "Isabry\\AdminLaravel\\": "src"
+        },
+        "classmap": [
+			// "src/commands",
+			// "src/controllers",
+			// "src/migrations",
+			"src/seeds"
 		]
 	},
 	"scripts": {
