@@ -19,3 +19,7 @@ To do
  - Works with major DBMS (mysql, sqlite, postgres)
  - 100% object oriented
 
+
+## Copyright & Licensing
+
+This package is written and maintained by Ismail SABRY. You can use the code as you see fit. See the LICENSE file for details.
