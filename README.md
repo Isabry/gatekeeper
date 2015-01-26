@@ -22,4 +22,4 @@ To do
 
 ## Copyright & Licensing
 
-This package is written and maintained by Ismail SABRY. You can use the code as you see fit. See the LICENSE file for details.
+This package is written and maintained by I.SABRY. You can use the code as you see fit. See the LICENSE file for details.
