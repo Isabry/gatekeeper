@@ -18,9 +18,9 @@
             "Isabry\\AdminLaravel\\": "src"
         },
         "classmap": [
-			// "src/commands",
-			// "src/controllers",
-			// "src/migrations",
+			"src/commands",
+			"src/controllers",
+			"src/migrations",
 			"src/seeds"
 		]
 	},
