@@ -47,18 +47,19 @@ class AdminLaravelServiceProvider extends ServiceProvider {
 		$this->registerCommands();
 	}
 
-    /**
-     * Registers some utility commands with artisan
-     * @return void
-     */
-    public function registerCommands()
-    {
-        $this->app->bind('command.admin-laravel.install', 'Isabry\AdminLaravel\commands\InstallCommand');
-        $this->app->bind('command.admin-laravel.seed',    'Isabry\AdminLaravel\commands\SeedCommand');
+	/**
+	 * Registers some utility commands with artisan
+	 * @return void
+	 */
+	public function registerCommands()
+	{
+		$this->app->bind('command.admin-laravel.install', 'Isabry\AdminLaravel\Console\InstallCommand');
+		// $this->app->bind('command.admin-laravel.seed',    'Isabry\AdminLaravel\Console\SeedCommand');
 
-        $this->commands('command.admin-laravel.install', 
-        				'command.admin-laravel.seed');
-    }
+		$this->commands('command.admin-laravel.install');
+		// $this->commands('command.admin-laravel.install', 
+		// 				'command.admin-laravel.seed');
+	}
 
 	/**
 	 * Get the services provided by the provider.

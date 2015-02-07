@@ -9,6 +9,8 @@
  * @link      https://github.com/isabry/admin-laravel
  */
 
+namespace Isabry\AdminLaravel\Console;
+
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -47,5 +49,8 @@ class SeedCommand extends Command {
 	 */
 	public function fire()
 	{
+		$this->comment('=====================================');
+		$this->comment('');
+		$this->info('  Seed');
 	}
 }
