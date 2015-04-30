@@ -1,27 +1,25 @@
-# admin-laravel
-This is a Laravel 4 Starter Site and it will help you getting started with Laravel 4 and Sentry 2.
-
-THIS PROJECT IS NOT MAINTAINED ANYMORE, PLEASE REFER TO LARADMIN (Isabry/laradmin)
+# GateKeeper
+This is a Laravel 5 Starter Site and it will help you getting started with Laravel 5 and Bootstrap 3
 
 ### Installation
-To do
+After you have installed the package, just follow the instructions.
+
+To Do
 
 ### Main features:
  - User authentication and signup
  - Configurable email confirmation
  - Groups creation and permissions management
- - Login throttling and password recovery
  - Password strength check
  - Dashboard
  - Create custom menu items with configurable permissions
- - Laravel 4 and Sentry based and easy to integrate in any Laravel application
  - Bootstrap 3 and responsive design
  - Easy install script from command line
  - Fully customizable and easy to extend
  - Works with major DBMS (mysql, sqlite, postgres)
  - 100% object oriented
 
-
 ## Copyright & Licensing
 
-This package is written and maintained by I.SABRY. You can use the code as you see fit. See the LICENSE file for details.
+This package is written and maintained by Ismail SABRY. 
+You can use the code as you see fit. See the LICENSE file for details.

@@ -1,28 +1,14 @@
 {
-	"name": "isabry/admin-laravel",
-	"description": "The admin pages integration for Laravel.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Ismail SABRY",
-			"email": "isabry@gmail.com"
-		}
-	],
-	"require": {
-        "php": ">=5.3.0",
-		"laravel/framework": "4.2.*",
-		"cartalyst/sentry": "2.1.*"
-	},
-	"autoload": {
-        "psr-4": {
-            "Isabry\\AdminLaravel\\": "src/"
-        },
-        "classmap": [
-			"src/commands",
-			"src/controllers",
-			"src/migrations",
-			"src/seeds"
-		]
-	}
+    "name": "isabry/gatekeeper",
+    "description": "Laravel 5 admin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ismail SABRY",
+            "email": "ismail@sabry.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    }
 }
