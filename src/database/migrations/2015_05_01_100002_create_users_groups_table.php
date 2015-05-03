@@ -9,7 +9,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserUsersTable extends Migration {
+class CreateUsersGroupsTable extends Migration {
 
 	/**
 	 * Run the migrations.

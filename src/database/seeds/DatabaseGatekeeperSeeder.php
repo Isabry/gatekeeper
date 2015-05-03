@@ -21,8 +21,9 @@ class DatabaseGatekeeperSeeder extends Seeder {
 		Model::unguard();
 
 		$this->call('MenusTableSeeder');
-		$this->call('GroupsTableSeeder');
 		$this->call('UsersTableSeeder');
+		$this->call('GroupsTableSeeder');
+		$this->call('UsersGroupsTableSeeder');
 	}
 
 }

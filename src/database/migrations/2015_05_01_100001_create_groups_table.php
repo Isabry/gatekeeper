@@ -22,6 +22,7 @@ class CreateGroupsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->boolean('enable')->default(true);
 			$table->text('permissions')->nullable();
 
 			$table->timestamps();

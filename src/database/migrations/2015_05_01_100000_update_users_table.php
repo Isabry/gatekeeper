@@ -20,6 +20,10 @@ class UpdateUsersTable extends Migration {
 	{
 		Schema::table('users', function (BluePrint $table) {
 			$table->boolean('enable')->default(true);
+			$table->string('profile')->default("");	
+			$table->enum('gender', ['male', 'female'])->default('male');
+			$table->date('birthdate')->default("");
+			$table->string('locale')->default('fr-FR');
 		});	
 	}
 

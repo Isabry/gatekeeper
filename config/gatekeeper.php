@@ -12,7 +12,8 @@ return array(
 	 */
 
 	'project' => array(
-		'name' => 'Laravel Starter',
+		'name' => 'GateKeeper',
+		'title' => 'GateKeeper',
 		'description' => 'Laravel Starter will help you getting started with Laravel 5',
 		'author' => 'Ismail Sabry',
 	),

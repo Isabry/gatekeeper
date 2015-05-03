@@ -28,7 +28,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	*/
 	public function boot()
 	{
-		$this->package('isabry/gatekeeper');
 	}
 
 	/**
@@ -41,23 +40,29 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
 		// Publish a config file
 		$this->publishes([
-    		__DIR__.'/../config/gatekeeper.php' => config_path('gatekeeper.php')
+			__DIR__.'/../config/gatekeeper.php' => config_path('gatekeeper.php')
 		], 'config');
 
 		// Publish assets
-		// $this->publishes([
-		    // __DIR__.'/../assets/' => base_path('/public/assets')
-		// ], 'migrations');
+		$this->publishes([
+			__DIR__.'/../assets/favicon.png' => base_path('/public/favicon.png'),
+			__DIR__.'/../assets/css' => base_path('/public/css'),
+			__DIR__.'/../assets/img' => base_path('/public/img'),
+			__DIR__.'/../assets/pics' => base_path('/public/pics'),
+			__DIR__.'/../assets/js' => base_path('/public/js'),
+			__DIR__.'/../assets/fonts' => base_path('/public/font'),
+			__DIR__.'/../assets/font-awesome' => base_path('/public/font-awesome'),
+		], 'assets');
 
 		// Publish migrations
 		$this->publishes([
-		    __DIR__.'/database/migrations/' => base_path('/database/migrations')
+			__DIR__.'/database/migrations/' => base_path('/database/migrations')
 		], 'migrations');
 
 
 		// Publish seeds
 		$this->publishes([
-		    __DIR__.'/database/seeds/' => base_path('/database/seeds')
+			__DIR__.'/database/seeds/' => base_path('/database/seeds')
 		], 'seeds');
 
 
@@ -71,8 +76,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 		});
 
 
-		$this->app->bind('command.gatekeeper.AddUser',  'Isabry\Gatekeeper\Console\AddUser');
-		$this->app->bind('command.gatekeeper.AddGroup', 'Isabry\Gatekeeper\Console\AddGroup');
+		$this->app->bind('command.gatekeeper.AddUser',  'Isabry\Gatekeeper\Console\AddUserCommand');
+		$this->app->bind('command.gatekeeper.AddGroup', 'Isabry\Gatekeeper\Console\AddGroupCommand');
 
 		$this->commands('command.gatekeeper.AddUser', 'command.gatekeeper.AddGroup');
 	}

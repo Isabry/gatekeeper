@@ -6,14 +6,16 @@
 		<span class="icon-bar"></span>
 	</button>
 	<a class="navbar-brand" href="/">
-		<strong class="text-primary"><i class="fa fa-openid"></i></strong>
-		<strong class="text-danger">{!! Laradmin::getProjectName() !!}</strong>
+		<section>
+			<img src="{!!asset('img/logo-w.png')!!}" width="24" height="24">
+			<span class="text-danger">{!! Gatekeeper::getProjectName() !!}</span>
+		</section>
 	</a>
 </div>
 
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	<ul class="nav navbar-nav">
-		@foreach ( Laradmin::getMenus('left') as $menu )
+		@foreach ( Gatekeeper::getMenus('left') as $menu )
 		<li {!! Request::is(ltrim($menu["href"]."*", "/"))?'class="active"':'' !!}>
 			<a href="{{$menu["href"]}}">
 				@if( $menu["icon_visible"] )
@@ -28,7 +30,12 @@
 	</ul>
 	
 	<ul class="nav navbar-nav navbar-right">
-		@foreach ( Laradmin::getMenus('right') as $menu )
+		@if( Auth::check() )
+		<li>
+			<a href="/profile"><img class="img-circle img-bordered bg-white" src="{!! Gatekeeper::getProfile(Auth::user()) !!}" width="24" height="24"> {!! Auth::user()->name !!}</a>
+		</li>
+		@endif
+		@foreach ( Gatekeeper::getMenus('right') as $menu )
 		<li {!! Request::is(ltrim($menu["href"]."*", "/"))?'class="active"':'' !!}>
 			<a href="{{$menu["href"]}}">
 				@if( $menu["icon_visible"] )
@@ -40,8 +47,5 @@
 			</a>
 		</li>
 		@endforeach
-		@if( Auth::check() )
-			<li><a href="#">({!! Auth::user()->name !!})</a></li>
-		@endif
 	</ul>
 </div>
