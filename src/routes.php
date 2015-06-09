@@ -1,5 +1,12 @@
 <?php
 
+Route::controllers([
+	'auth'     => 'Isabry\Gatekeeper\Controllers\Auth\AuthController',
+	'password' => 'Isabry\Gatekeeper\Controllers\Auth\PasswordController',
+]);
+
+//-----------------------------------------------------------------------------
+// Home
 // Route::group(['middleware' => 'auth'], function() {
 	Route::get('/',         'Isabry\Gatekeeper\Controllers\HomeController@index');
 	Route::get('home',      'Isabry\Gatekeeper\Controllers\HomeController@index');

@@ -27,7 +27,7 @@ class Group extends Model {
 	 */
 	public function users()
 	{
-		// Group <- Users
+		// Groups <- Users
 		return $this->belongsToMany('Isabry\Gatekeeper\Models\User', 'users_groups');
 	}
 }

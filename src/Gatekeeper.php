@@ -83,7 +83,7 @@ class Gatekeeper {
 	public static function getProfile($user)
 	{
 		if( isset($user->id) ) {
-			Debugbar::info($user->toArray());
+			// Debugbar::info($user->toArray());
 			$profile =  strlen($user->profile) ? 
 						$user->profile :
 						"pics/" . $user->gender . ".png";				

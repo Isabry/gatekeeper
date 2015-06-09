@@ -27,18 +27,21 @@ class GroupsTableSeeder extends Seeder
 		// DELETE: Delete the entity.
         $groups = [
 			[
+				'id' => 100,
 				'name' => 'administrators',
 				'permissions' => serialize([]),
 				'created_at' => $datetime,
 				'updated_at' => $datetime,
 			],
 			[
+				'id' => 200,
 				'name' => 'superusers',
 				'permissions' => serialize([]),
 				'created_at' => $datetime,
 				'updated_at' => $datetime,
 			],
 			[
+				'id' => 300,
 				'name' => 'users',
 				'permissions' => serialize([]),
 				'created_at' => $datetime,

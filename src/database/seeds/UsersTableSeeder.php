@@ -62,9 +62,10 @@ class UsersTableSeeder extends Seeder
 
 		DB::table('users')->insert($users);
 
-		$ismail = [
+		$sabry = [
 			[
-				'name' => 'ismail',
+				'id' => 101,
+				'name' => 'Ismail',
 				'email' => 'ismail@sabry.fr',
 				'password' => Hash::make('ismail'),
 				'gender' => 'male',
@@ -72,8 +73,38 @@ class UsersTableSeeder extends Seeder
 				'created_at' => $datetime,
 				'updated_at' => $datetime,
 			],
+			[
+				'id' => 102,
+				'name' => 'Martine',
+				'email' => 'martine@sabry.fr',
+				'password' => Hash::make('martine'),
+				'gender' => 'female',
+				'profile' => '',
+				'created_at' => $datetime,
+				'updated_at' => $datetime,
+			],
+			[
+				'id' => 103,
+				'name' => 'Sarah',
+				'email' => 'sarah@sabry.fr',
+				'password' => Hash::make('sarah'),
+				'gender' => 'female',
+				'profile' => '',
+				'created_at' => $datetime,
+				'updated_at' => $datetime,
+			],
+			[
+				'id' => 104,
+				'name' => 'Hossana',
+				'email' => 'hossana@sabry.fr',
+				'password' => Hash::make('hossana'),
+				'gender' => 'female',
+				'profile' => '',
+				'created_at' => $datetime,
+				'updated_at' => $datetime,
+			],
 		];
-		DB::table('users')->insert($ismail);
+		DB::table('users')->insert($sabry);
 
 	}
 }

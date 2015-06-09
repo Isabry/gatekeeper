@@ -84,7 +84,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	public function groups()
 	{
-		// User <- Groups
+		// Users <- Groups
 		return $this->belongsToMany('Isabry\Gatekeeper\Models\Group', 'users_groups');
 	}
 }

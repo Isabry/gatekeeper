@@ -29,7 +29,7 @@ class MenusTableSeeder extends Seeder
 			[
 				'auth' => true,
 				'href' => '/users',
-				'icon' => '<i class="fa fa-users"></i>',
+				'icon' => '<i class="fa fa-user"></i>',
 				'label' => 'Users',
 				'permissions' => serialize(['administrators']),
 				'side' => 'left',
