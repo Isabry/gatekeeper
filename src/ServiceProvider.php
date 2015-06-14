@@ -37,7 +37,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	 */
 	public function register()
 	{
-
 		// Publish a config file
 		$this->publishes([
 			__DIR__.'/../config/gatekeeper.php' => config_path('gatekeeper.php')
@@ -70,11 +69,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
 		$this->loadViewsFrom(__DIR__.'/views', 'gatekeeper');
 
-
 		$this->app['gatekeeper'] = $this->app->share(function($app) {
 			return new Gatekeeper();
 		});
-
 
 		$this->app->bind('command.gatekeeper.AddUser',  'Isabry\Gatekeeper\Console\AddUserCommand');
 		$this->app->bind('command.gatekeeper.AddGroup', 'Isabry\Gatekeeper\Console\AddGroupCommand');
