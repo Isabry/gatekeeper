@@ -67,6 +67,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
 		include __DIR__.'/routes.php';
 
+		// Publish migrations
+		$this->publishes([
+			__DIR__.'/views/auth/' => base_path('/resources/views/auth')
+		], 'views');
+
 		$this->loadViewsFrom(__DIR__.'/views', 'gatekeeper');
 
 		$this->app['gatekeeper'] = $this->app->share(function($app) {
